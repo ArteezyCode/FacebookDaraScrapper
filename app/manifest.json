@@ -1,0 +1,39 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon/16.png",
+      "default_locale": "en",
+      "default_popup": "popup.html",
+      "default_title": "IH Facebook data"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "js/styles.css" ],
+      "js": [ "js/bundle.js" ],
+      "matches": [ "http://www.facebook.com/*", "https://www.facebook.com/*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "en",
+   "description": "Try use this extensions and scrape free.",
+   "icons": {
+      "128": "icon/128.png",
+      "48": "icon/48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu3ddPbGPEkyMWqemRU4yL3kbxWNvpjYVXS+scWgItlGAaCcWBjNyG6ltLZkhdmZ3dIHl/2/drNHCvVS+FNPh+iSZDy87UAGOnsiH+PKg2n90ccKrkAtS93qmMoylYev+DkV6SC6omsPKbVwi3ypq/NRp2Lz/gi4K41yIAbLRAP0H/5boIHePlx0BfwRQd5Z2duz5zgM7RDJfCdvwI6rwTvwLowWWUeS6FexLlPEzWNRGH5LkJ251qLWjcHl+tG0vfMi+AKqSXyRlP43DCfWx6tEYpIh0Q7QzmtnTSCrwCVDkzVCfq1UM5b6ugMiS+mz48f3wguBdODzUb+KpVEqMSwIDAQAB",
+   "manifest_version": 2,
+   "name": "Scrape FB People",
+   "permissions": [ "storage", "tabs", "webNavigation", "*://www.facebook.com/*","identity","https://www.googleapis.com/" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.5",
+   "web_accessible_resources": [ "icon/*.png" ],
+   "oauth2": {
+    "client_id": "208587085844-28f53d8kfm4e41khci40nrsp8t9nr0l6.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/plus.login",
+      "https://www.googleapis.com/auth/chromewebstore.readonly"
+    ]
+  }
+}
